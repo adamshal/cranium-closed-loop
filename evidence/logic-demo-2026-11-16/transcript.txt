@@ -1,0 +1,20 @@
+Physical UART decode, 115200 baud 8N1. CRAdam0001 is the project device identifier, not a credential.
+
+D0 (host requests):
+GET_ID
+GET_ID
+GET_ID
+GET_ID
+GET_ID
+
+D1 (board replies, including echoes):
+GET_ID
+OK CRAdam0001|1.19.3+0
+GET_ID
+OK CRAdam0001|1.19.3+0
+GET_ID
+OK CRAdam0001|1.19.3+0
+GET_ID
+OK CRAdam0001|1.19.3+0
+GET_ID
+OK CRAdam0001|1.19.3+0

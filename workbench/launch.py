@@ -38,8 +38,11 @@ def start_logic():
     try:
         with a.Manager.connect(port=10430,connect_timeout_seconds=1):return
     except Exception:pass
-    binary=ROOT/'.local/logic2/Saleae Logic.app/Contents/MacOS/Logic'
-    if not binary.exists():raise RuntimeError('Run setup.sh to install Saleae Logic 2')
+    candidates=[ROOT/'.local/logic2/Saleae Logic.app/Contents/MacOS/Logic',
+                Path('/Applications/Logic.app/Contents/MacOS/Logic'),
+                Path('/Applications/Saleae Logic.app/Contents/MacOS/Logic')]
+    binary=next((p for p in candidates if p.exists()),None)
+    if binary is None:raise RuntimeError('Install Saleae Logic 2 and enable its Automation API on port 10430')
     log=ROOT/'.state/logic2.log';log.parent.mkdir(mode=0o700,exist_ok=True)
     with log.open('ab') as output:
         env=os.environ.copy();env['PYTHONDONTWRITEBYTECODE']='1'

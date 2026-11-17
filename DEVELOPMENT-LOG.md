@@ -40,3 +40,26 @@
   and a blocked PPK2 preflight without energizing unverified hardware.
 - Prepared public source, a comparison table, pending power-results table,
   wiring/build instructions, sanitized software evidence and host-only CI.
+
+## 2026-11-16: chat-driven logic-analyzer demonstration
+
+- Used the ChatGPT/Codex chat agent directly for code edits, tool execution,
+  physical-capture analysis and repeated tests. Hapimatic was not the agent
+  orchestrator for this demonstrated workflow.
+- Preserved the teammate's existing CRANIUM 1.19.3+0 firmware. No firmware
+  program/erase/recover was performed for the logic-analyzer demo.
+- Initial captures were idle. Labelled UART traffic on the first J-Link VCOM
+  interface did not appear on P0.22/P0.20. The second interface, with DTR
+  explicitly asserted, produced request and reply transitions on the analyzer.
+- The existing console rejected the first labelled probe as an unknown command.
+  Reading HELP identified GET_ID as a supported read-only test command.
+- Corrected the checker to accept the actual single-line OK id|version reply
+  rather than expecting a separate OK line. Echo alone is insufficient.
+- Repeated the physical test: five GET_ID requests, five valid replies. Saved
+  raw digital transitions, decoded bytes, original .sal and JSON verdicts;
+  used the Logic 2 API to present the capture on screen automatically.
+- Published representative measured data from the final repeated run and
+  offline replay checks. The broader C1/CRC, flash and power verdict remains
+  incomplete. PPK2 setup was explored but no valid power capture was completed.
+- Revised the submission around the implemented chat-driven method; retained
+  earlier Hapimatic/PPK2 plans as explicitly historical/optional documentation.

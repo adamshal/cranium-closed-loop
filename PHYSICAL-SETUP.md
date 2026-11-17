@@ -1,5 +1,10 @@
 # One-time physical setup
 
+**Current submission:** follow the solder-free Saleae/UART wiring and commands
+in [README.md](README.md#reproduce-the-demonstrated-test). The demonstrated path
+needs neither a PPK2 nor any firmware flash. The following is the earlier
+full firmware/power rig proposal, retained for future experiments.
+
 The computer-side setup is installed on this Mac. The Pi and its SD card are
 not needed for this lab loop. This programs the **nRF7002 DK's nRF5340**, so use
 the project development board rather than another lab group's device.

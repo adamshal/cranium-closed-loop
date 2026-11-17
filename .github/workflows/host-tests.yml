@@ -19,7 +19,7 @@ jobs:
         run: |
           python -m venv .venv
           .venv/bin/python -m pip install -r requirements.txt
-      - name: Run host and actual C parser tests
+      - name: Run host tests, actual C parser and recorded UART trace replay
         run: ./bench test
       - name: Explain scope
-        run: echo 'These are host tests. No physical flash, Saleae capture or PPK2 measurement is claimed by CI.'
+        run: echo 'CI runs software tests and replays the saved November 16 physical trace. CI does not perform a new board test, flash, Saleae capture or PPK2 measurement.'

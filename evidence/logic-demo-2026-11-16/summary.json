@@ -1,0 +1,47 @@
+{
+  "started_at": "20261116T185059.791848Z",
+  "finished_at": "2026-11-16T18:51:09.233057+00:00",
+  "status": "read_only_uart_test_passed",
+  "firmware_written": false,
+  "ppk_used": false,
+  "sample_rate_hz": 4000000,
+  "duration_s": 8,
+  "baud_assumption": 115200,
+  "read_only_test": {
+    "command": "GET_ID",
+    "requests_observed": 5,
+    "complete_replies": 5,
+    "results": [
+      {
+        "reply_complete": true,
+        "payload_start_latency_ms": 0.3414
+      },
+      {
+        "reply_complete": true,
+        "payload_start_latency_ms": 0.3362
+      },
+      {
+        "reply_complete": true,
+        "payload_start_latency_ms": 0.3407
+      },
+      {
+        "reply_complete": true,
+        "payload_start_latency_ms": 0.3359
+      },
+      {
+        "reply_complete": true,
+        "payload_start_latency_ms": 0.3354
+      }
+    ],
+    "passed": true
+  },
+  "board": "nRF7002 DK",
+  "instrument": "physical Saleae Logic 8",
+  "firmware_version": "1.19.3+0",
+  "demonstrated_read_only_hardware_test_passed": true,
+  "full_firmware_optimization_hil_passed": false,
+  "hapimatic_orchestrated": false,
+  "source": "original physical digital transition capture; independently decoded",
+  "timing_basis": "end of request UART frame to start of valid OK id|version payload, excluding echo",
+  "maximum_payload_start_latency_ms": 0.3414
+}

@@ -1,0 +1,3 @@
+# Only the demonstrated serial + logic-analyzer path; no Hapimatic/PPK2/SDK.
+pyserial==3.5
+logic2-automation==1.0.11

@@ -1,0 +1,26 @@
+{
+  "captured_at_utc": "20261116T185059.791848Z",
+  "data_kind": "physical, not simulated",
+  "original_artifacts_sha256": {
+    "capture.sal": "fb843c035a6732de2f1980b8e48b94045b1462ef3f7b9d3ab3116a6b9c4618c1",
+    "channel-0.bin": "faf55f468a1a5d6b873b618e8f96ea4a49aa40a68f1c236e6101fd5838579548",
+    "channel-1.bin": "7d6c689092310ab9b08ec43d365dfcca9e7d38a458fe461b20046ca5e694cf49",
+    "decoded.csv": "d37dd4b957b673fe6b5b52a632576b558a17ca858f97277a3b6aeb6803716fca",
+    "digital.csv": "b724c41cf53276ebc25d7e432c7fbcb21cc4ee0f2fd638241c710338f1a3be05"
+  },
+  "public_raw_csv_unmodified": true,
+  "capture_sal_retained_locally": true,
+  "private_metadata_omitted": [
+    "USB instrument serial numbers",
+    "host serial-port names",
+    "absolute local filesystem paths"
+  ],
+  "raw_data_note": "The actual project device identifier returned by GET_ID is present in the UART bytes.",
+  "excluded_from_publication": [
+    "firmware flash backups",
+    "local credentials and access tokens",
+    "private configuration",
+    "user music"
+  ],
+  "summary_source": "saved result of the demonstrated November 16 repeated GET_ID run"
+}

@@ -3,6 +3,14 @@
 Work on the nRF7002 DK's nRF5340 companion, not the live DJ audio engine.
 Read README.md, PHYSICAL-SETUP.md, requirements.json and the selected prompt first.
 
+The current demonstrated workflow is the chat-driven read-only UART test in
+README.md and prompts/CHAT-DEMO.md. It uses tools/logic-demo.py and a physical
+Saleae, without PPK2, Hapimatic or flashing. Its five GET_ID replies are distinct
+from the legacy C1/CRC/power requirement. Do not start bench run or replace a
+teammate's working firmware to reproduce the demo. CI replays recorded evidence;
+it does not generate new hardware measurements. The rules below concerning the
+full optimization rig apply only when that separate experiment is requested.
+
 During an autonomous firmware optimization run:
 
 - Use the `cranium-bench` MCP tools to build, flash, capture and read results.
