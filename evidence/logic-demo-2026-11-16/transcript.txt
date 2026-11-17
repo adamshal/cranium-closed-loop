@@ -1,4 +1,5 @@
 Physical UART decode, 115200 baud 8N1. CRAdam0001 is the project device identifier, not a credential.
+Line endings are normalized for display; the original digital CSV preserves the wire data.
 
 D0 (host requests):
 GET_ID
